@@ -1,24 +1,5 @@
 # react-golang-full-stack
 
-This is a custom boilerplate to build a full stack web application using React, Golang and Webpack. It is also configured with webpack-dev-server, eslint, prettier and babel. It is pretty much entirely based upon [simple-react-full-stack](https://github.com/crsandeep/simple-react-full-stack) so check it out. I've just converted it from a npmjs/express backend to Golang.
-
-- [react-golang-full-stack](#react-golang-full-stack)
-  - [Introduction](#introduction)
-    - [Development mode](#development-mode)
-    - [Production mode](#production-mode)
-  - [Quick Start](#quick-start)
-  - [Documentation](#documentation)
-    - [Folder Structure](#folder-structure)
-    - [Babel](#babel)
-    - [ESLint](#eslint)
-    - [Webpack](#webpack)
-    - [Webpack dev server](#webpack-dev-server)
-    - [NoDemon](#nodemon)
-    - [Golang](#golang)
-    - [Concurrently](#concurrently)
-    - [VSCode + ESLint + Prettier](#vscode--eslint--prettier)
-      - [Installation guide](#installation-guide)
-
 ## Introduction
 
 [Create React App](https://github.com/facebook/create-react-app) is the quickest way to get started with React development and it requires no build configuration. But it overly simplifes and hides the build config making it difficult to extend once you've developed your skills. It also requires some additional work to integrate it with a Golang backend application.
