@@ -1,27 +1,49 @@
 import React, { Component } from "react";
-import "./app.css";
-import ReactImage from "./react.png";
+import "./App.css";
+import Header from './Header';
+import Home from "./Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Checkout from "./Checkout";
+import Login from "./Login";
 
 export default class App extends Component {
-  state = { username: null };
-
-  componentDidMount() {
-    fetch("/api/username")
-      .then((res) => res.json())
-      .then((user) => this.setState({ username: user.username }));
-  }
 
   render() {
-    const { username } = this.state;
     return (
-      <div>
-        {username ? (
-          <h1>{`Hello ${username}`}</h1>
-        ) : (
-          <h1>Loading.. please wait!</h1>
-        )}
-        <img src={ReactImage} alt="react" />
-      </div>
+      <Router>
+        <div className="app">
+          <Routes>
+            <Route
+              path="/login"
+              element={
+                <>
+                  <Login />
+                </>
+              }
+            />
+
+            <Route
+              path="/checkout"
+              element={
+                <>
+                  <Header />
+                  <Checkout />
+                </>
+              }
+            />
+
+            <Route
+              path="/"
+              element={
+                <>
+                  <Header />
+                  <Home />
+                </>
+              }
+            />
+          </Routes>
+        </div>
+      </Router>
     );
   }
 }
